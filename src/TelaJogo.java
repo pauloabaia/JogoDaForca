@@ -215,6 +215,7 @@ public class TelaJogo {
 			if (jogo.terminou()){
 				labelAviso.setText(jogo.getResultado());
 				buttonIr.setEnabled(false);
+				textFieldLetra.setEnabled(false);
 				if (jogo.getResultado().matches("Você foi enforcado!")) {
 					frame.getContentPane().setBackground(new Color(255, 102, 102));
 				}
