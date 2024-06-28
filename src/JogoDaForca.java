@@ -9,13 +9,13 @@ public class JogoDaForca {
 	private int penalidade = 0;
 	private ArrayList<String> letrasAdivinhadas = new ArrayList<>();
 	private ArrayList<String> penalidadeMensagens = new ArrayList<>(Arrays.asList(
-			"sem penalidades",
-			"perdeu primeira perna",
-			"perdeu segunda perna",
-			"perdeu primeiro braço",
-			"perdeu segundo braço",
-			"perdeu tronco",
-			"perdeu cabeça"
+			"Sem penalidades",
+			"Perdeu primeira perna",
+			"Perdeu segunda perna",
+			"Perdeu primeiro braço",
+			"Perdeu segundo braço",
+			"Perdeu tronco",
+			"Perdeu cabeça"
 	));
 
 	public JogoDaForca() throws Exception {
@@ -64,10 +64,10 @@ public class JogoDaForca {
 		ArrayList<Integer> ocorrencias = new ArrayList<>();
 
 		if (letra.isEmpty()) {
-			throw new Exception("Letra não pode ser nula");
+			throw new Exception("Digite uma letra");
 		}
 		if (letra.length() > 1) {
-			throw new Exception("Letra deve conter apenas um caractere");
+			throw new Exception("Digite apenas uma letra");
 		}
 		if (letrasAdivinhadas.contains(letra.toUpperCase())){
 			throw new Exception("Letra já foi usada");
@@ -130,10 +130,10 @@ public class JogoDaForca {
 	
 	public String getResultado() {
 		if (penalidade >= 6){
-			return "Voce foi enforcado";
+			return "Você foi enforcado!";
 		}
 		if (acertos == palavraSorteada.length()){
-			return "Voce ganhou";
+			return "Você ganhou!";
 		}
 		return "Jogo em andamento";
 //		retorna uma das 3 opções: “você venceu” ou “você foi enforcado” (se o jogo terminou) ou “jogo em
