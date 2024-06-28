@@ -79,6 +79,7 @@ public class TelaJogo {
 					labelAcertos.setText(Integer.toString(jogo.getAcertos()));
 					labelPalavra.setText(jogo.getPalavraAdivinhada());
 					buttonIr.setEnabled(true);
+					textFieldLetra.setEnabled(true);
 					ImageIcon forcaTrans = new ImageIcon(getClass().getResource("imagens/"+jogo.getNumeroPenalidade()+".png"));
 					labelForca.setIcon(forcaTrans);
 					labelAviso.setText("");
@@ -161,8 +162,9 @@ public class TelaJogo {
 				irLetra();
 			}
 		});
-		
+		 
 		textFieldLetra = new JTextField();
+		textFieldLetra.setEnabled(false);
 		textFieldLetra.setBounds(308, 289, 32, 20); //252
 		frame.getContentPane().add(textFieldLetra);
 		textFieldLetra.setColumns(10);
