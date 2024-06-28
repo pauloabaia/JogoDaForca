@@ -146,7 +146,7 @@ public class TelaJogo {
 					else {
 						labelAviso.setText("Você errou a letra " + textFieldLetra.getText());
 						labelPenalidades.setText(jogo.getNomePenalidade());
-						ImageIcon forcaTrans = new ImageIcon(getClass().getResource("imagens/"+ jogo.getNumeroPenalidade()+".png" ));
+						ImageIcon forcaTrans = new ImageIcon(getClass().getResource("projeto1-Jogo-da-forca/src/imagens/"+jogo.getNumeroPenalidade()+".png"));
 						labelForca.setIcon(forcaTrans);
 					}
 					labelAviso.setText("");
