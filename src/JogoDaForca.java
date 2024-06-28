@@ -60,6 +60,9 @@ public class JogoDaForca {
 //	encontrada ou contabiliza uma penalidade, na ausência da mesma. Lançar uma exceção caso o parâmetro
 //	letra for vazio, tiver mais de 1 caractere ou já tenha sido adivinhado anteriormente. O parâmetro letra pode
 //	estar em maiúscula ou minúscula.
+
+		ArrayList<Integer> ocorrencias = new ArrayList<>();
+
 		if (letra.isEmpty()) {
 			throw new Exception("Letra não pode ser nula");
 		}
@@ -69,7 +72,10 @@ public class JogoDaForca {
 		if (letrasAdivinhadas.contains(letra.toUpperCase())){
 			throw new Exception("Letra já foi usada");
 		}
-		ArrayList<Integer> ocorrencias = new ArrayList<>();
+		if (!letra.matches( "^[a-zA-Z]+$")) {
+			penalidade++;
+			return ocorrencias;
+		}
 		String[] palavra = palavraSorteada.toUpperCase().split("");
 
 		for (int i = 0; i < palavraSorteada.length(); i++) {
