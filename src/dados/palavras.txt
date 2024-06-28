@@ -1,4 +1,8 @@
-OBJETO;È uma inst‚ncia da classe
 BOLSA;guarda objetos pessoais
 COLA;gruda as coisas
 SALA;local para ver TV
+COMPUTADOR;realiza c√°lculos
+IMPRESSORA;imprime documentos
+MONITOR;exibe imagens
+MOUSE;controla o cursor
+TECLADO;digita texto
