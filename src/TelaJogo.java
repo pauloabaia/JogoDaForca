@@ -225,6 +225,7 @@ public class TelaJogo {
 		}
 		catch (Exception ex) {
 			labelAviso.setText(ex.getMessage());
+			textFieldLetra.setText("");
 		}
 	}
 }
