@@ -32,14 +32,14 @@ public class AplicacaoConsole {
 				try {
 					ocorrencias = jogo.getOcorrencias(letraDigitada);
 					if (ocorrencias.size() > 0) {
-						System.out.println("voce acertou a letra =" + letraDigitada);
+						System.out.println("voce acertou a letra = " + letraDigitada);
 					}
 					else {
 						System.out.println("voce errou a letra = " + letraDigitada);
 					}
 					System.out.println("------------RESUMO-------------------");
 					System.out.println("total de acertos = " + jogo.getAcertos());
-					System.out.println("penalidade = " + jogo.getNumeroPenalidade() + "-" + jogo.getNomePenalidade());
+					System.out.println("penalidade = " + jogo.getNumeroPenalidade() + "- " + jogo.getNomePenalidade());
 					System.out.println("letras adivinhadas = " + jogo.getPalavraAdivinhada());
 					System.out.println("-------------------------------------");
 				} 
