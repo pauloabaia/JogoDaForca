@@ -199,19 +199,17 @@ public class TelaJogo {
 	public void irLetra() {
 		try {
 			ocorrencias = jogo.getOcorrencias(textFieldLetra.getText());
-			if (ocorrencias.size() > 0) {
-				labelAviso.setText("Você acertou a letra "+ textFieldLetra.getText());
+			if (!ocorrencias.isEmpty()) {
+				labelAviso.setText("Você acertou a letra: "+ textFieldLetra.getText().toUpperCase());
 				labelAcertos.setText(Integer.toString(jogo.getAcertos()));
 				labelPalavra.setText(jogo.getPalavraAdivinhada());
 			}
 			else {
-				labelAviso.setText("Você errou a letra " + textFieldLetra.getText());
+				labelAviso.setText("Tentativa falha: " + textFieldLetra.getText().toUpperCase());
 				labelPenalidades.setText(jogo.getNomePenalidade());
 				ImageIcon forcaTrans = new ImageIcon(getClass().getResource("imagens/"+ jogo.getNumeroPenalidade()+".png" ));
 				labelForca.setIcon(forcaTrans);
 			}
-			labelAviso.setText("");
-			textFieldLetra.setText("");
 			if (jogo.terminou()){
 				labelAviso.setText(jogo.getResultado());
 				buttonIr.setEnabled(false);
@@ -226,6 +224,9 @@ public class TelaJogo {
 		}
 		catch (Exception ex) {
 			labelAviso.setText(ex.getMessage());
+			textFieldLetra.setText("");
+		}
+		finally {
 			textFieldLetra.setText("");
 		}
 	}

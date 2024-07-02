@@ -96,12 +96,9 @@ public class JogoDaForca {
 		if (penalidade >= 6) {
 			return true;
 		}
-		if (acertos == palavraSorteada.length()) {
-			return true;
-		}
+        return acertos == palavraSorteada.length();
 		//retorna true se o jogo terminou.
-		return false;
-	}
+    }
 
 	public String getPalavraAdivinhada() {
 		//retorna a palavra contendo as letras adivinhadas até o momento e “*” nas letras ainda não adivinhadas
