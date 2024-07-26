@@ -13,6 +13,6 @@ O Jogo da Forca é um jogo em que o jogador tem 6 tentativas para adivinhar as l
 Este projeto foi desenvolvido como parte da disciplina de Programação Orientada a Objetos no curso de Sistemas para Internet do IFPB.
 🔗 Links Úteis
 
-    GitHub de Itallo Oliveira: GitHub
-    LinkedIn de João Paulo Baia: LinkedIn
-    LinkedIn de Itallo Oliveira: LinkedIn
+    GitHub de Itallo Oliveira: github.com/itallume
+    LinkedIn de João Paulo Baia: www.linkedin.com/in/joao-paulo-baia-95747722b
+    LinkedIn de Itallo Oliveira: www.linkedin.com/in/itallo-oliveira-474482268/
