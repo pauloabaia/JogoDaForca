@@ -58,6 +58,8 @@ public class TelaJogo {
 	private void initialize() {
 	
 		frame = new JFrame();
+		frame.setFont(new Font("Consolas", Font.BOLD, 17));
+		frame.setTitle("Jogo da Forca");
 		frame.getContentPane().setBackground(new Color(102, 205, 170));
 		frame.setBounds(100, 100, 480, 460);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
