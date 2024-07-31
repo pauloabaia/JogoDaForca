@@ -80,7 +80,7 @@ public class JogoDaForca {
 
 		for (int i = 0; i < palavraSorteada.length(); i++) {
 			if (palavra[i].matches(letra.toUpperCase())) {
-				ocorrencias.add(i);
+				ocorrencias.add(i+1);
 			}
 		}
 		if (ocorrencias.size() > 0) {
