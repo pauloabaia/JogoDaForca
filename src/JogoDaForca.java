@@ -40,7 +40,7 @@ public class JogoDaForca {
 	public void iniciar() {
 		//realiza o sorteio de uma palavra/dica.
 		Random escolhaPD = new Random();
-		palavraSorteada = palavras.get(escolhaPD.nextInt(palavras.size())).toUpperCase();
+		palavraSorteada = palavras.get(escolhaPD.nextInt(palavras.size()));
 	}
 
 	public String getDica() {
@@ -83,10 +83,10 @@ public class JogoDaForca {
 				ocorrencias.add(i+1);
 			}
 		}
-		if (ocorrencias.size() > 0) {
+		if (ocorrencias.size() > 0) { //se houver ocorrências
 			acertos += ocorrencias.size();
 			letrasAdivinhadas.add(letra.toUpperCase());
-		} else {
+		} else {                      //se não houver
 			penalidade++;
 		}
 		return ocorrencias;

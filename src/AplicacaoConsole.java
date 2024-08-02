@@ -12,8 +12,8 @@ public class AplicacaoConsole {
 
 	private JogoDaForca jogo;
 	private Scanner teclado;
-	private String letraDigitada;		//letra lida do teclado
-	private ArrayList<Integer> ocorrencias; // posicoes adivinhadas
+	private String letraDigitada;//letra lida do teclado
+	private ArrayList<Integer> ocorrencias; //posicoes adivinhadas
 
 
 	public AplicacaoConsole() {
@@ -27,7 +27,7 @@ public class AplicacaoConsole {
 
 			//loop de leituras
 			do {
-				System.out.println("\ndigite uma letra: " );
+				System.out.print("\ndigite uma letra: " );
 				letraDigitada = teclado.nextLine();
 				try {
 					ocorrencias = jogo.getOcorrencias(letraDigitada);
@@ -37,6 +37,7 @@ public class AplicacaoConsole {
 					else {
 						System.out.println("voce errou a letra = " + letraDigitada);
 					}
+					System.out.println();
 					System.out.println("------------RESUMO-------------------");
 					System.out.println("total de acertos = " + jogo.getAcertos());
 					System.out.println("penalidade = " + jogo.getNumeroPenalidade() + "- " + jogo.getNomePenalidade());
@@ -49,7 +50,7 @@ public class AplicacaoConsole {
 			} while (!jogo.terminou());
 
 			teclado.close();
-			System.out.println("\n");
+			System.out.println();
 			System.out.println("resultado final = " + jogo.getResultado());
 			System.out.println("letras adivinhadas = " + jogo.getPalavraAdivinhada());
 		} catch (Exception e) {
